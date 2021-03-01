@@ -1,0 +1,54 @@
+
+Type-I: hyper-ver
+Type-II: host->vm
+
+虚拟机的目的是为了 环境隔离，不影响其他进程
+
+
+Docker 隔离用户空间
+
+jail
+chroot
+
+一个用户空间能看到的资源
+UTS: 主机名或域名
+IPC:（进程间通信） 信号量，消息队列，共享内存
+Mount：挂载点，文件系统
+PID：进程编号
+Network: 网络设备，网络栈，端口
+User: 用户和用户组 | kernel 3.8
+
+CGroups:把系统级的资源分成多个组，然后把每个组内的资源量分配到特定用户空间的进程上
+cgroups:
+  blkio: 块设备IO
+  cpu
+  cpuacct
+  cpuset
+  devices
+  freezer
+  memory
+  perf_event
+  net_cls
+
+----
+LXC: LinuX Container
+
+创建一个容器
+1,创建一个用户空间
+2，template 通过模板来完成软件的安装
+3，chroot
+
+---
+Docker 是LXC的二次封装发行
+
+image技术
+
+
+
+
+
+
+进程： 进程树，文件系统树
+内存属于非可压缩性资源，要就必须有，没有就kill
+
+
