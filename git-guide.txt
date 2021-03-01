@@ -1,0 +1,8 @@
+
+ssh-keygen -t rsa -C "email"
+
+git config --global user.name "user name"
+
+git config --global user.email "email address"
+
+git clone 
